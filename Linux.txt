@@ -1,0 +1,163 @@
+Ubuntu - It is a linux distribution
+Unix - It is the foundation of Linux. It is a command-line based operating system
+Linux - It is a free open-source operating system
+
+Interfaces:
+Command line interface (CLI)
+Graphical user interface (GUI)
+
+Linux CLI commands:
+
+PWD:
+pwd - print working directory
+
+CD:
+cd <path> - change directory
+cd .. - move one level up
+
+MAKE/DEL DIRECTORY:
+mkdir <folder name> - make directory - creates a new directory (folder)
+rmdir <folder name> - removes directory
+
+MV:
+mv <filename> <folder name> - move a file to another folder
+
+CP:
+cp <filename> <folder name> - copy a file to another folder
+cp <file1> <file2> - create a copy of file1 named file2
+
+RM:
+rm <filename> - delete a file in the directory
+
+TOUCH:
+touch <filename.txt> - creates empty file
+touch .filename - creates hidden files which are not shown in ls, its hiden
+
+
+CHMOD:
+chmod <binary equivalent> <filename> - changes permissions of a file (read, write, execute)
+
+OPEN/EXECUTE FILES:
+open <filename> - open a file
+./<filename> - execute the file
+python3 ./<filename.py> - execute python file
+
+HISTORY LOG:
+history - shows all the commands run till now
+
+COMMENT:
+#this is a comment - use # to write a comment
+
+DECLARE VARIABLE:
+x=<value> - creating a variable (no space allowed near =)
+
+ECHO:
+echo <input> - print something on the terminal
+echo $x - prints value in variable x
+echo b{a,e,i,o,u}d - prints bad bed bid bod bud (iterates like a for loop)
+echo file{5..25} - prints sequences, file5 to file 25
+echo file{05..25..3} - prints sequences with a gap of 3
+echo \$HOME or '$HOME' - \or ' turns off $. This is called escaping a character.
+echo $'My name is...\nMy name is...\nMy name is...\nSlim Shady!' - print multiple lines using 1 echo command
+
+LS:
+ls - list system / list directory contents
+ls -R - recursively list the contents of any subdirectories in the directory
+ls -a - list all the files even the hidden ones
+ls -l - list all contents with their access permission
+ls -al - list all files even the hidden ones and their access permissions
+ls -lh - list all files with file size
+ls * - Matching file / folder names (zero or more characters) eg. test -> ls t*
+ls ? - Matching file / folder names (Exactly one character) eg. test -> ls tes?
+
+NANO:
+nano <filename> - creates a file inside the terminal
+
+CAT:
+cat <filename> - displays the content of the file
+cat <file1> <file2> - concatenates the files and displays the content
+tac <filename> - displays the content of the file in reverse order (opposite of cat)
+
+HEAD:
+head <filename> - displays the first 10 lines
+head -n 3 <filename> - displays the first 3 / specified lines
+
+TAIL:
+tail <filename> - displays the last 10 lines
+tail -n 2 <filename> - displays the last 2 / specified lines
+
+WC:
+wc <filename> - displays the lines, word count, characters
+wc -l <filename> - displays only the no. of lines
+
+UNIQ:
+uniq <filename> - shows unique consecutive words 
+uniq -c <filename> - displays the unique count of consecutive words after squashing
+uniq -u <filename> - shows only words with count 1  
+
+SORT:
+sort <filename> - sorts and organizes the contents of a file
+
+COMM:
+comm <file1> <file2> - compares two "sorted" files line by line and shows the unique and common lines between them.
+
+TR:
+cat <filename> | tr '[a-z]' '[A-Z]' - used to translate or delete characters, performs operations such as changing uppercase letters to lowercase, replacing specific characters in a string, deleting specific characters, and compressing or deleting repeated characters.
+
+CUT:
+cut -c 1-10 <filename> - shows character 1 to 10 from the file
+cut -d " " -f 1,3 <filename> - extracts specific fields from a file, specify delimiter using -d.
+
+FILE TYPE:
+file <filename> - returns the file type
+
+CURL:
+curl <url> - dumps contents of the url to the screen
+
+WGET:
+wget <url> - saves the contents of the url to a file
+wget -qO - <url> - displays the contents of the url on screen instead of saving to file
+
+TEE:
+tee <filename> - redirects output to both display and file (clobber)
+tee -a <filename> - appends to the file rather than overwriting it
+
+REDIRECTION OPERATORS:
+> - redirects std o/p to a file (overwrites existing contents)
+>> - redirects std o/p to a file (appends to any exisiting contents)
+rcho Hello 2> error101 - rcho isn't a command and throws error which is stored in error101 and not displayed on the screen.
+< - redirects input from a file to a command
+
+NAVIGATE MAN PAGE:
+space - go down
+b - go up
+q - quit
+
+SHORTCUTS:
+ctrl <- and -> - Move cursor right / left a word 
+ctrl a - Move cursor to start of line
+crtl e - Move cursor to end of line
+ctrl u - removes the entire line 
+
+NOTE:
+Linux is case sensitive, meaning Viththal.txt, VITHTHAL.txt, VIThthal.txt are all valid and different files.
+
+USERS:
+1. Regular user - access to its home directory only
+2. Root user / Super user - access to the full system (Admin)
+
+Assignment 1:
+wget -qO - https://web.math.princeton.edu/~perezgiz/usdec.txt | tr -s '[:punct:][:space:]]' '\n' | sort | uniq -c -i | sort -n | tail | tee usdechistogram.txt
+
+Breakdown -
+wget -qO url: get data from url and display on stdout
+tr -s '[:punct:][:space:]]' '\n' - replace punctuation and whitespace with a newline character
+sort - sort all the words alphabetically so its easy to sqaush and find unique count
+uniq -c -i - returns the count of word after sqaushing and ignores case
+sort -n - sorts by number
+tail - returns the last 10 lines
+tee filename - redirects output to both display and file
+
+
+
+
