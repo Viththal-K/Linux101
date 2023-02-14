@@ -102,10 +102,14 @@ tee -a <filename> --> appends to the file rather than overwriting it
 FILE TYPE:
 file <filename> --> returns the file type
 
-OPEN/EXECUTE FILES:
+OPEN/EXECUTE FILE:
 open <filename> --> opens a file
 ./<filename> --> executes the file
 python3 ./<filename.py> --> executes a python file
+
+TAR FILE:
+tar cvf <filename.tar> <file1> <file2> --> compresses file1 and file2 into a tar file.
+tar xvf <filename.tar> --> extracts files from the tar file
 
 HISTORY LOG:
 history --> shows all the commands run till now
