@@ -14,7 +14,7 @@ stderr --> defaults to screen (abbrev 2)
                                
  Example: rcho Hello 2 > error101 --> rcho isn't a command and throws error which is stored in error101 and not displayed on the screen.                              
                                
-# PIPES
+PIPES
 The pipe operator | is placed between two commands that sit on a single line
 
 Example: cat file1 file2 | sort | head
