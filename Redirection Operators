@@ -1,0 +1,20 @@
+Linux has 3 core file streams:
+
+stdin --> defaults to keyboard (abbrev 0)
+stdout --> defaults to screen (abbrev 1)
+stderr --> defaults to screen (abbrev 2)
+
+>                              # redirect stdout to a file ((overwrites existing contents)
+1>                             # same as above
+>>                             # redirect stdout to a file (appends to any exisiting contents)
+2>                             # redirect stderr to a file (clobbers)
+2>&1                           # redirect stderr to wherever stdout is
+<                              # redirect input from file to command
+                               # (order of redirections matters!)
+                               
+ Example: rcho Hello 2 > error101 --> rcho isn't a command and throws error which is stored in error101 and not displayed on the screen.                              
+                               
+# PIPES
+The pipe operator | is placed between two commands that sit on a single line
+
+Example: cat file1 file2 | sort | head
