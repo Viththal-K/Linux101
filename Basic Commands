@@ -1,12 +1,18 @@
 COMMENT:
 #this is a comment --> use # to write a comment
+<<comment --> use <<comment to write multi-line comment
+Your
+Comment
+Here
+comment(This word has to be the same as the word used near <<)
 
 DECLARE VARIABLE:
-x=<value> --> creates a variable (no space allowed near =)
+var=<value> --> define a variable (no space allowed near =)
+readonly var_name="Hello" --> define a variable that can't be changed until end of script
 
 ECHO:
 echo <input> --> prints the input on the terminal
-echo $x --> prints value in variable x
+echo $var --> prints value in variable x
 echo b{a,e,i,o,u}d --> iterates like a for loop (prints bad bed bid bod bud)
 echo file{5..25} --> prints sequences, file5 to file 25
 echo file{05..25..3} --> prints sequences with a gap of 3
