@@ -1,0 +1,29 @@
+Comparison Operators:
+
+-eq --> equal to 
+eg. [ "$a" -eq "$b" ]
+
+-ne --> not equal to
+eg. [ "$a" -ne "$b" ]
+
+-gt --> greater than 
+eg. [ "$a" -gt "$b" ]
+
+-ge --> greater than or equal to 
+eg. [ "$a" -ge "$b" ]
+
+-lt --> less than 
+eg. [ "$a" -lt "$b" ]
+
+-le --> less than or equal to 
+eg.[ "$a" -le "$b" ]
+
+Boolean Operators:
+
+! --> logical negation, inverts a true condition into false and vice versa.	
+
+-o --> logical OR
+eg. [ $a -lt 20 -o $b -gt 100 ]
+
+-a --> logical AND
+eg. [ $a -lt 20 -a $b -gt 100 ]
