@@ -1,0 +1,14 @@
+NANO:
+nano <filename> --> creates a file inside the terminal
+
+Navigation -
+Ctrl O --> save file
+Ctrl X --> exit
+
+
+VI Editor:
+vi <filename> --> creates a file
+
+Navigation -
+i --> to start editing
+Shift ZZ --> exit
