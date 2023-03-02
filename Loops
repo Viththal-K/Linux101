@@ -1,0 +1,28 @@
+For Loop:
+for var in words / range
+do
+   echo $var
+done
+
+Example:
+for var in {1..10}
+do
+   echo $var
+done
+
+
+While Loop:
+while command
+do
+   Statement to be executed if command is true
+done
+
+Example:
+count=0
+num=10
+
+while [ $count -le $num ]
+do
+	echo $count
+	let count++
+done
