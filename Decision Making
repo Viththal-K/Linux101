@@ -1,0 +1,62 @@
+If-Else:
+
+if [ expression ]
+then
+	Statement to be executed if expression is true
+else
+	Statement to be executed if expression is not true
+fi
+
+Example:
+if [ $age -ge 18 ]
+then
+	echo "You are eligible to vote"
+else
+	echo "You are underage"
+fi
+
+
+Elif:
+
+if [ expression1 ]
+then
+	Statement to be executed if expression1 is true
+elif [ expression2 ]
+then
+	Statement to be executed if expression2 is true
+else
+	Statement to be executed if neither expression are true
+fi
+
+
+Check If File/Dir exist:
+
+if [ -d folder_name ] --> checks if folder exists
+
+if [ -f file_name ] --> checks if file exists
+
+if [ ! -d folder_name ] --> checks if folder exists
+
+if [ ! -f file_name ] --> checks if file exists
+
+
+Switch-Case:
+
+case word in
+   pattern1) Statement to be executed if pattern1 matches ;;
+   pattern2) Statement to be executed if pattern2 matches ;;
+   *) Default condition to be executed ;;
+esac
+
+Example:
+echo "Choose an option"
+echo "a -> See current date and time"
+echo "b -> List all files in directory"
+
+reach choice
+
+case $choice in
+	a) date ;;
+	b) ls ;;
+	*) echo "Invalid input" ;;
+esac
