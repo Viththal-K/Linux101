@@ -120,5 +120,8 @@ tar xvf <filename.tar> --> extracts files from the tar file
 HISTORY LOG:
 history --> shows all the commands run till now
 
+SLEEP:
+sleep <time> --> creates a delay between two executions (eg. 1s/1m)
+
 SET:
 set -x --> enables debugging of a script
