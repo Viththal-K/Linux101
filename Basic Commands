@@ -55,9 +55,6 @@ TOUCH:
 touch <filename.txt> --> creates an empty file
 touch .filename --> creates a hidden file which is not listed in list, its hiden
 
-NANO:
-nano <filename> --> creates a file inside the terminal
-
 CAT:
 cat <filename> --> displays the content of the file on stdout
 cat <file1> <file2> --> concatenates the contents of multiple files and displays the content on stdout
