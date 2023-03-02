@@ -119,3 +119,6 @@ tar xvf <filename.tar> --> extracts files from the tar file
 
 HISTORY LOG:
 history --> shows all the commands run till now
+
+SET:
+set -x --> enables debugging of a script
