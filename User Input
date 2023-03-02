@@ -1,0 +1,16 @@
+echo "Enter your name" --> prints a message to user
+read name_var -->  After the message is displayed takes input from user
+
+or
+
+read -p "Enter your name" name_var --> prints message and takes input from the user 
+
+Example:
+#!/bin/bash
+
+echo "What is your name:"
+read name_var
+
+read -p "What is your age: " age_var
+
+echo "Your name is $name_var and you are $age_var years old."
