@@ -1,0 +1,37 @@
+File ownership is an important component of Linux that provides a secure method for storing files. 
+
+Every file in Linux has the following attributes −
+Owner permissions − The owner's permissions determine what actions the owner of the file can perform on the file.
+Group permissions − The group's permissions determine what actions a user, who is a member of the group that a file belongs to, can perform on the file.
+Other (world) permissions − The permissions for others indicate what action all other users can perform on the file.
+
+File Access Modes
+The permissions of a file are the first line of defense in the security of a system. 
+The basic building blocks of permissions are the read, write, and execute permissions.
+
+Read
+Grants the capability to read, i.e., view the contents of the file.
+
+Write
+Grants the capability to modify, or remove the content of the file.
+
+Execute
+User with execute permissions can run a file as a program.
+
+
+You can modify permissions with the chmod command.
+It uses a number to specify each set of permissions for the file.
+
+Each permission is assigned a value, as the following table shows -
+
+Number	  Permission Representation		      Ref
+0		      No permission				              ---
+1		      Execute permission			          --x
+2		      Write permission				          -w-
+3		      Execute and write permission		  -wx
+4		      Read permission				            r--
+5		      Read and execute permission		    r-x
+6		      Read and write permission		      rw-
+7		      All permissions				            rwx
+
+For eg. 777 means owner, group and others all have read, wirte and execute permission.
