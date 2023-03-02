@@ -1,4 +1,4 @@
-It's important to understand the general anatomy of a command. The top of a man page explains it for any given command.
+It's important to understand the general anatomy of a command. The man page explains it for any given command.
 
 MAN:
 man <command> --> displays the manual page for the command
