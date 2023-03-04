@@ -1,11 +1,40 @@
-Exercise 1: Word-frequency in US Declaration of Independence
+### Exercise:
 
-Using only the utilities we've seen so far, write a single pipeline that will ultimately output (both to stdout and to a file called usdechistogram.txt) the top 10 words, by frequency (and ignoring case) in the US Declaration of Independence, along with the number of times each occurs.
+Digital clock -
 
-This group exercise will require a lot of reading of man pages and iterative trial and error, and it brings together most (or all) of the skills we've learned so far. Go for it!
+Write a shell script that will output the time and run continuously as a clock. 
 
-Command: 
+### Command:
+```
+#!/bin/bash
+
+while true
+do
+  clear
+  echo $(date +%T)
+  sleep 1s
+done
+```
+
+Explanation -
+while --> to run a loop that outputs continuously
+clear --> clears the last output from the terminal
+echo $(date +%T) --> prints only the time from the date time output
+sleep 1s --> takes a 1s break before running the loop again
+
+### Exercise:
+
+Word-frequency in US Declaration of Independence -
+
+Write a single pipeline that will output (both to stdout and to a file called usdechistogram.txt) the top 10 words, by frequency (and ignoring case) in the US Declaration of Independence, along with the number of times each occurs.
+```
+https://web.math.princeton.edu/~perezgiz/usdec.txt
+```
+
+### Command: 
+```
 wget -qO - https://web.math.princeton.edu/~perezgiz/usdec.txt | tr -s '[:punct:][:space:]]' '\n' | sort | uniq -c -i | sort -n | tail | tee usdechistogram.txt
+```
 
 Explanation -
 wget -qO url --> get data from url and display on stdout
