@@ -1,8 +1,8 @@
 # Linux Basics
 
-Unix - It is the foundation of Linux. It is a command-line based operating system
-Ubuntu - It is a linux distribution
-Linux - It is a free open-source operating system
+- Unix - It is the foundation of Linux. It is a command-line based operating system
+- Ubuntu - It is a linux distribution
+- Linux - It is a free open-source operating system
 
 ### Note:
 Linux is case sensitive, meaning Viththal.txt, VITHTHAL.txt, VIThthal.txt are all valid and different files.
