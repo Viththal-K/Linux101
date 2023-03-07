@@ -1,8 +1,8 @@
-# Linux Basics
+# Linux Commands
 
-- Unix - It is the foundation of Linux. It is a command-line based operating system
-- Ubuntu - It is a linux distribution
-- Linux - It is a free open-source operating system
+This repository contains a list of the most common Linux commands and their usage examples. 
+
+All commands are organized in categories for easier reference.
 
 ### Note:
 Linux is case sensitive, meaning Viththal.txt, VITHTHAL.txt, VIThthal.txt are all valid and different files.
