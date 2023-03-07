@@ -122,3 +122,6 @@ sleep <time> --> creates a delay between two executions (eg. 1s/1m)
 
 SET:
 set -x --> enables debugging of a script
+
+MAIL:
+mail -s "Subject" recipient@example.com --> send email from the terminal
