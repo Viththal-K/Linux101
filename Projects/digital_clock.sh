@@ -2,7 +2,7 @@
 
 while true
 do
-  clear
+  clear   #to clear previous output
   echo $(date +%T)
   sleep 1s
 done
