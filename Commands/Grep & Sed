@@ -1,0 +1,10 @@
+grep -Ei -w "(the|that|then|those)"
+
+# The command is a regular expression search command that searches for any lines in a text file that contain the words "the", "that", "then", or "those"
+# The options "-E" and "-i" enable extended regular expressions and case-insensitive matching
+# while "-w" matches only whole words, so it won't match words like "there" or "theme"
+
+sed 's/\bthe\b/this/'
+
+#The s command in sed (which stands for "substitute") by default only substitutes the first occurrence of the pattern on each line
+#The regular expression \bthe\b matches the word 'the' when it appears
