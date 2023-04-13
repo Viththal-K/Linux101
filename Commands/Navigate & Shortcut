@@ -9,14 +9,14 @@ b - go up
 q - quit
 
 SHORTCUTS:
-Up Arrow & Down Arrow	-> Previously used commands in the current session
+up arrow & down arrow	-> Previously used commands in the current session
 ctrl A -> Move cursor to start of line
 crtl E -> Move cursor to end of line
 ctrl U -> Removes the entire line 
-Ctrl K ->	Delete all the line from the current cursor position.
-Ctrl W ->	Delete the word before the current cursor position.
-Ctrl D -> On a blank line is the same as the exit command. Otherwise, it deletes the character in front of the cursor.
-Ctrl C -> Stop the current running command.
-Ctrl-Shift-C -> Copy
-Ctrl-Shift-V ->	Paste
-Tab	-> Command completion.
+ctrl K -> Delete all the line from the current cursor position
+ctrl W -> Delete the word before the current cursor position
+ctrl D -> On a blank line is the same as the exit command. Otherwise, it deletes the character in front of the cursor
+ctrl C -> Stop the current running command
+ctrl-Shift-C -> Copy
+ctrl-Shift-V ->	Paste
+tab -> Command completion
