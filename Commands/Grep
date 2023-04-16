@@ -1,0 +1,40 @@
+GREP stands for Global Regular Expression Print
+
+grep "string" <filename> -> searches and matches the string and prints all the lines in which it appears
+
+grep -w "string" <filename> -> searches for the line containing the exact matching word
+
+grep -i "string" <filename> -> searches and matches the string while ignoring case sensitivity
+
+grep -c "string" <filename> -> counts the total number of lines where the string pattern appears or resides
+
+grep -n "string" <filename> -> returns the line number for the lines where the string pattern is matched
+
+grep -r "string" * -> searches for the string recursively in all directories (current directory, other subdirectories)
+
+grep -v "string" <filename> -> displays the lines that do not contain the string 
+
+'''
+^      Matches characters at the beginning of a line
+$      Matches characters at the end of a line
+"."    Matches any character
+[a-z]  Matches any characters between A and Z
+[^a-z] Matches anything apart from what is contained in the brackets
+'''
+
+grep ^character <filename> -> returns lines beginning with a certain character
+
+grep character$ <filename> -> returns lines ending with a certain character
+
+grep [a-d] <filename> -> highlights all the places where the certain characters appear
+
+grep [^a-d] <filename> -> highlights all the places where the certain characters do not appear
+
+Example:
+
+grep -Ei -w "(the|that|then|those)"
+
+Explanation:
+
+The command is a regular expression search command that searches for any lines in a text file that contain the words "the", "that", "then", or "those"
+The options "-E" enables extended regular expressions, "-i" enables case-insensitive matching and "-w" matches only whole words, words like "there" or "theme" won't match
