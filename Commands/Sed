@@ -1,0 +1,10 @@
+SED command in UNIX stands for stream editor and it can perform lots of functions on file like searching, find and replace, insertion or deletion.
+Though most common use of SED command in UNIX is for substitution or for find and replace. 
+By using SED you can edit files even without opening them, which is much quicker way to find and replace something in file.
+
+Command -
+sed 's/\bthe\b/this/'
+
+Explanation -
+The s command in sed (which stands for "substitute") by default only substitutes the first occurrence of the pattern on each line
+The regular expression \bthe\b matches the word 'the' when it appears
