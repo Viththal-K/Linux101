@@ -2,6 +2,57 @@ SED command in UNIX stands for stream editor and it can perform lots of function
 Though most common use of SED command in UNIX is for substitution or for find and replace. 
 By using SED you can edit files even without opening them, which is much quicker way to find and replace something in file.
 
+Replacing / substituting commands:
+
+sed 's/<string1>/<string2>' <filename> -> replaces only the first occurrence of the pattern in each line
+
+sed 's/<string1>/<string2>/3' <filename> -> replaces only the third occurrence of the pattern in each line
+
+sed 's/<string1>/<string2>/g' <filename> -> replaces all the occurrence of the pattern in each line (global replacement)
+
+sed 's/<string1>/<string2>/3g' <filename> -> replaces the third, fourth, fifth and so on occurrences of the pattern in each line
+
+sed 's/<string1>/<string2>/ig' <filename> -> replaces all the occurrence of the pattern ignoring the case sensitivity
+
+sed '2 s/<string1>/<string2>/' <filename> -> replaces the occurrence of the pattern on a specific line number
+
+sed '1,3 s/<string1>/<string2>/' <filename> -> replaces the occurrence of the pattern in a range of line numbers
+
+sed '2,$ s/<string1>/<string2>/' <filename> -> replaces the occurrence of the pattern from second line to last line ($ = last line)
+
+Deleting commands:
+
+sed '5d' <filename> -> deletes a particular line from the file
+
+sed '$d' <filename> -> deletes the last line from the file
+
+sed '3,6d' <filename> -> deletes lines in the range from the file
+
+sed '5,$d' <filename> -> deletes from particular line to last line from the file
+
+sed '/<pattern>/d' <filename> -> deletes the pattern matching line
+
+Selecting text commands:
+
+sed -n '1,4p' <filename> -> extracts lines one to four from the file
+
+sed -n -e '1,4p' -e '30,34p' <filename> -> extracts lines one to four and thirty to thirty four from the file (-e =  make multiple selections)
+
+sed -n '1~3p' <filename> -> extracts lines skipping steps. First number indicates the starting line and second number tells the lines to skip. The number 2 means every second line, 3 means every third line, and so on
+
+sed -n '/^<word>/p' <filename> -> extracts lines that start with the specific word
+
+Examples -
+
+Command:
+echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
+
+Output:
+(W)elcome (T)o (T)he (G)eek (S)tuff
+
+Explanation:
+Prints the first character of every word in parenthesis
+
 Command -
 sed 's/\bthe\b/this/'
 
