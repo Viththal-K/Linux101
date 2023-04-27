@@ -1,0 +1,19 @@
+In Linux, managing user accounts and permissions is typically done through the command-line interface. 
+
+Here are the steps to perform tasks such as managing user accounts and permissions in Linux:
+
+who -> lists the current users on a Linux network
+
+su <username> -> change users on a Linux network, stands for "switch user" and allows a switch to another user account without logging out of your current account
+
+sudo useradd <username> -> creates a new user account 
+
+sudo passwd <username> -> sets password for the new user account 
+
+sudo usermod -aG sudo <username> -> modifies an existing user account (username and desired modifications, for ex - to add username to sudo group) 
+
+sudo userdel <username> -> deletes an existing user account
+
+chmod 777 <filename> -> sets permissions for a file or directory
+
+sudo chown <username> <filename> -> changes ownership of a file or directory
