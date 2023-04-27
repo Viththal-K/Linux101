@@ -1,4 +1,5 @@
 In Linux, managing user accounts and permissions is typically done through the command-line interface. 
+Use sudo if administrative permission is required.
 
 Here are the steps to perform tasks such as managing user accounts and permissions in Linux:
 
