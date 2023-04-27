@@ -1,0 +1,36 @@
+1. AWK Operations: 
+a) Scans a file line by line 
+b) Splits each input line into fields 
+c) Compares input line/fields to pattern 
+d) Performs action(s) on matched lines 
+
+2. Useful For: 
+a) Transform data files 
+b) Produce formatted reports 
+
+3. Programming Constructs: 
+a) Format output lines 
+b) Arithmetic and string operations 
+c) Conditionals and loops 
+
+
+NR: NR command keeps a current count of the number of input records. Remember that records are usually lines.
+ 
+NF: NF command keeps a count of the number of fields within the current input record. 
+
+
+Commands:
+
+awk '{print}' <filename> -> prints every line of the file
+
+awk '/<pattern>/ {print}' <filename> -> prints lines that matches the pattern
+
+awk '{print $2,$3}' <filename> -> prints specific columns from the file
+
+awk '{print NR,$0}' <filename> -> prints all lines displaying its number
+
+awk 'NR==3, NR==6 {print NR,$0}' <filename> -> prints lines between 3 and 6
+
+awk 'END  {prnit NR}' <filename> -> prints the count of lines in a file
+
+awk 'length($0) > 10' <filename> -> prints lines with more than 10 characters
