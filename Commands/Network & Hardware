@@ -1,0 +1,25 @@
+id -> displays user and group information for the current user or specified username
+
+hostname -> displays the hostname of the current system
+
+uname -r -> displays the kernel release information
+
+ip -> displays IP addresses assigned to network interfaces
+
+ifconfig -> displays the configuration and status of network interfaces
+
+netstat -> displays network connections, routing tables, and network interface statistics
+
+ss -> displays socket statistics
+
+ps -> displays currently running processes
+
+who -> displays information about currently logged-in users 
+
+env -> displays the current environment variables 
+
+lsblk -> lists information about block devices on the system
+
+lsusb -> lists USB devices connected to the system
+
+lsof -> lists open files
