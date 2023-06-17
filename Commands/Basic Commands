@@ -6,6 +6,9 @@ Comment
 Here
 comment(This word has to be the same as the word used near <<)
 
+RUN MULTIPLE COMMANDS:
+echo "Hello World" ; echo ; echo "Viththal" --> runs all the commands together separated by ; 
+
 DECLARE VARIABLE:
 var=<value> --> define a variable (no space allowed near =)
 readonly var_name="Hello" --> define a variable that can't be changed until end of script
