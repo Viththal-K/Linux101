@@ -1,0 +1,21 @@
+A cron job in Linux is a scheduled task that runs automatically at specified intervals or at specific times. 
+It allows you to automate repetitive tasks or execute commands at predetermined times without manual intervention.
+
+# Example of job definition:
+# .---------------- minute (0 - 59)
+# |  .------------- hour (0 - 23)
+# |  |  .---------- day of month (1 - 31)
+# |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...
+# |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat
+# |  |  |  |  |
+# *  *  *  *  * user-name command_to_be_executed
+
+Eg.
+1. 17 6 * 1 *   root    cd / && run-parts --report /etc/cron.hourly
+2. 57 0 * * * echo "this is my first cron job" > /home/ubuntu/test_cron_first.txt
+3. 0 9 * * 1-5 bash /home/ubuntu/script/check_disk.sh >> /home/ubuntu/disk_logs.txt
+Explanation: Runs the check_disk script at 9am from Monday to Friday and appends output in log file.
+
+crontab -e -> opens editor(nano) to edit cron jobs 
+
+crontab -l -> list the existing cron jobs for the current user
