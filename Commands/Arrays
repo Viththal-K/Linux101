@@ -1,13 +1,35 @@
-1) Find the length of array ->
-i=0
-while read lines
-do 
-    i=$((i+1))
+arr=("element1" "element2" "element3" "element4")
+
+• Find the length of array -->
+
+array_length=${#arr[@]}
+
+• Iterating  over the array -->
+
+for ((i=0; i<$array_length; i++))
+do
+    echo "${arr[i]}"
 done
 
-echo $i
+or 
 
-2) Read the content of each line into an array and then display the entire array ->
+for j in "${arr[@]}"
+do
+  echo "$j"
+done
+
+• Printing all elements in array -->
+
+echo ${arr[@]}
+or
+echo ${arr[*]}
+
+• Adding element to an array -->
+
+array[index]=value
+eg. numbers[5]="element5"
+
+• Read the content of each line into an array and then display the entire array -->
 
 i=0
 while read lines
@@ -18,7 +40,7 @@ done
 
 echo ${array[@]}  # prints entire array 
 
-3) Slice the array and display only the elements lying between positions 3 and 7, both inclusive ->
+• Slice the array and display only the elements lying between positions 3 and 7, both inclusive -->
 
 i=0
 while read lines
@@ -29,7 +51,7 @@ done
 
 echo ${array[@]:3:5}  # selecting 3th,4th,5th,6th,7th element from the array, so 5 elements from 3.
 
-4) Read the contents of each line into an array and then filter out (remove) all the names containing the letter 'a' or 'A' ->
+• Read the contents of each line into an array and then filter out (remove) all the names containing the letter 'a' or 'A' -->
 
 i=0
 while read country
@@ -43,12 +65,12 @@ done
 
 echo ${array[@]}
 
-5) The first capital letter (if present) in each element of the array should be replaced with a dot ('.'). Then, display the entire array ->
+• The first capital letter (if present) in each element of the array should be replaced with a dot ('.'). Then, display the entire array -->
 
 array=$(sed 's/[A-Z]/./')
 echo $array
 
-6) Find the number that occurs only once in an input stream ->
+• Find the number that occurs only once in an input stream -->
 
 read n
 arr=$(cat)
