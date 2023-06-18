@@ -1,0 +1,12 @@
+• Using the generic format -->
+
+AGE=25
+if [ "$AGE" -eq 25 ]; then result="true"; else result="false"; fi
+echo "$result"
+
+• Using the other format -->
+
+[expression1] && Expression2|| Expression3
+Example -
+[ $AGE == 25 ] && result="true" || result="false"
+echo "$result"
