@@ -51,6 +51,13 @@ CP:
 cp <filename> <folder name> --> copies the file to the specified folder
 cp <file1> <file2> --> creates a copy of file1 named as file2
 
+SCP: Server copy
+sudo scp -i <pem file> <source> <destination:path> --> sends local files to server or files on the server to local
+(Note: always run scp command from the local computer)
+
+eg. sudo scp -i TWS-key.pem local_file.txt ubuntu@ec2-54-72-184-240.eu-west-1.compute.amazonaws.com:/home/ubuntu/new_folder/
+- Sends file from your local computer to new_folder on server
+
 RM:
 rm <filename> --> deletes the file in the current directory
 
