@@ -1,0 +1,17 @@
+Systemctl is a command-line utility in Linux systems that is used to manage and control the system service manager.
+
+With systemctl, you can start, stop, restart, enable, disable, and check the status of services. Here are some commonly used systemctl commands:
+
+systemctl status <service_name> --> provides the current status and some information about a specified service
+
+sudo systemctl start <service_name> --> starts a specified service
+
+sudo systemctl stop <service_name> --> stops a specified service
+
+sudo systemctl restart <service_name> --> restarts a specified service
+
+sudo systemctl enable <service_name> --> enables a specified service to start automatically at boot
+
+sudo systemctl disable <service_name> --> disables a specified service from starting automatically at boot
+
+systemctl list-unit-files --type=service --> lists all available services on the system
