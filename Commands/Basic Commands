@@ -63,12 +63,15 @@ rm <filename> --> deletes the file in the current directory
 
 TOUCH:
 touch <filename.txt> --> creates an empty file
-touch .filename --> creates a hidden file which is not listed in list, its hiden
+touch .filename --> creates a hidden file that is not listed in list, its hidden
 
 CAT:
 cat <filename> --> displays the content of the file on stdout
 cat <file1> <file2> --> concatenates the contents of multiple files and displays the content on stdout
 tac <filename> --> displays the content of the file in reverse order (opposite of cat)
+
+FIND:
+find -name <filename> --> search for a file, returns its path
 
 HEAD:
 head <filename> --> displays the first 10 lines of a file
@@ -135,3 +138,10 @@ set -x --> enables debugging of a script
 
 MAIL:
 mail -s "Subject" recipient@example.com --> send email from the terminal
+
+PACKAGE:
+apt search <pa­ckage_name> -->searches packages for instal­lation
+
+sudo apt-get install <pa­ckage_name> --> installs a package
+
+sudo apt-get remove <pa­ckage name> --> uninstalls a package
