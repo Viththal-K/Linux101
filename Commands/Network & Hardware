@@ -2,7 +2,11 @@ id -> displays user and group information for the current user or specified user
 
 hostname -> displays the hostname of the current system
 
-uname -r -> displays the kernel release information
+cat /etc/o­s-r­elease -> displays the OS name, release, version
+
+uname -m -> displays the CPU architecture
+
+uname -r -> displays the kernel release version
 
 ip -> displays IP addresses assigned to network interfaces
 ip -4 addr -> displays IPv4
@@ -20,8 +24,16 @@ who -> displays information about currently logged-in users
 
 env -> displays the current environment variables 
 
+lshw -> lists system hardware
+
+lscpu -> lists CPU details
+
 lsblk -> lists information about block devices on the system
 
 lsusb -> lists USB devices connected to the system
 
 lsof -> lists open files
+
+free -h -> displays system memory status
+
+ps aux --sort­=-%mem -> displays the process specific memory utiliz­ations
